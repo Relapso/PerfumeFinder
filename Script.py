@@ -60,3 +60,49 @@ else:
                 break
             else:
                 print('Escolha inválida. Por favor, selecione um número válido.')
+
+# segunda busca ////////////////////////////////////////////////////////////////////////////////////////
+                
+def pequiperfumes_buscar(nome_perfume):
+    base_url = 'https://www.pequiperfumes.com.br/search/'
+    url = urljoin(base_url, f'?q={quote_plus(nome_perfume)}')
+    response = requests.get(url)
+
+    if response.status_code == 200:
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        search_results = soup.find('div', class_='search-results-container')
+        if search_results and search_results.text.strip() == 'Nenhum resultado encontrado para a pesquisa.':
+            return 'Nenhum resultado encontrado para a pesquisa.'
+
+        resultados = []
+
+        itens_perfume = soup.find_all('div', class_='span3 item-container m-bottom-half')
+
+        for item in itens_perfume:
+            nome_element = item.find('a', class_='item-name')
+            preco_element = item.find('span', class_='preco-produto')
+            if nome_element and preco_element:
+                nome = nome_element.text.strip()
+                preco = preco_element.text.strip()
+                resultados.append({'nome': nome, 'preco': preco})
+
+        return resultados
+    else:
+        return f'Falha ao obter a página: {response.status_code}'
+
+# Solicitando ao usuário que digite o nome do perfume a ser buscado
+nome_perfume = input('Digite o nome do perfume: ')
+
+# Buscando perfumes no site "pequiperfumes.com.br" com base no nome fornecido
+resultados = pequiperfumes_buscar(nome_perfume)
+
+# Verificando se a busca retornou uma mensagem de erro
+if isinstance(resultados, str):
+    print(resultados)  # Imprimindo a mensagem de erro
+else:
+    # Imprimindo os resultados encontrados
+    for i, resultado in enumerate(resultados, start=1):
+        print(f'Perfume {i}:')
+        print(f'  Nome: {resultado["nome"]}')
+        print(f'  Preço: {resultado["preco"]}')
