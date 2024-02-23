@@ -1,2 +1,5 @@
 # PerfumeFinder
-Pesquisa os melhores preços de perfumes em sites especificos
+Sou colecionador e apreciador de perfumes, como conheço sites exclusivos para isso, fiz um buscador e comparador de perfumes para achar o melhor preço possivel!
+esta em desenvolvimento!
+Funçoes que ja estao funcionando:
+Primeiro site webscraping ja está funcionando perfeitamente, caso tenha mais de um perfume, vc deve selecionar o correto através do programa
