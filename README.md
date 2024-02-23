@@ -10,6 +10,7 @@ Como Usar:
 <li>Insira o nome do perfume.</li>
 <li>Veja os preços de diferentes lojas.</li>
 <li>Selecione a opção desejada.</li>
+<br>
 <b>Nota: O PerfumeFinder está em desenvolvimento.</b><br>
 
 Boa busca de perfumes com o PerfumeFinder! 🌸👃🛍️
