@@ -1,6 +1,16 @@
-# PerfumeFinder
-Sou colecionador e apreciador de perfumes, como conheço sites exclusivos para isso, fiz um buscador e comparador de perfumes para achar o melhor preço possivel!
-esta em desenvolvimento!<br>
-Funçoes que ja estao funcionando:<br>
-Primeiro site webscraping ja está funcionando perfeitamente<br>
-Caso tenha mais de um perfume com o nome igual ex: for him, for her, e vc não especificar, vc devera selecionar o correto através de numeros: 1,2,3...<br>
+
+#PerfumeFinder
+PerfumeFinder é uma ferramenta para encontrar os melhores preços de perfumes online. Com ele, você pode comparar preços de várias lojas sem precisar navegar manualmente.
+
+Recursos:
+
+WebScraping: Obtém informações de produtos das MELHORES E DESCONHECIDAS lojas online
+Tratamento de Múltiplas Opções: Permite escolher entre diferentes opções de perfumes.
+Como Usar:
+
+Insira o nome do perfume.
+Veja os preços de diferentes lojas.
+Selecione a opção desejada.
+Nota: O PerfumeFinder está em desenvolvimento.
+
+Boa busca de perfumes com o PerfumeFinder! 🌸👃🛍️
